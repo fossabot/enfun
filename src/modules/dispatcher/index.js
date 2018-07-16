@@ -1,7 +1,7 @@
-import routes from "./routes";
+import routes from './routes';
 
 const mod = {
-    routes
+	routes
 };
 
 export default mod;
