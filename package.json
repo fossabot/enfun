@@ -18,7 +18,8 @@
     "build": "babel src -s -D -d dist --presets es2015,stage-0",
     "start": "node dist",
     "prestart": "npm run -s build",
-    "test": "echo 'Test script is not defined, it is comming soon'"
+    "test": "echo 'Test script is not defined, it is comming soon'",
+    "lint": "eslint src"
   },
   "dependencies": {
     "consola": "^1.4.1",
