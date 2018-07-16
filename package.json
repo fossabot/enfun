@@ -1,0 +1,8 @@
+{
+  "name": "enfun",
+  "version": "1.0.0",
+  "description": "A servless cloud functions server",
+  "main": "dist",
+  "author": "Matisiek PL <matisiek11@gmail.com>",
+  "license": "MIT"
+}
