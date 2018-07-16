@@ -1,15 +1,13 @@
 import express from 'express';
 import consola from 'consola';
-import fs from 'fs';
-import path from 'path';
+import loader from './modules/loader';
+import dispatcher from './modules/dispatcher';
 
-export default ({ port }) => {
+export default ({port, config}) => {
 	const app = express();
-	const moduleNames = fs.readdirSync(path.join(__dirname, 'modules'));
-	for(let moduleName of moduleNames) {
-		const module = require(path.join(__dirname, 'modules', moduleName));
-		module.routes(app);
-	}
+	const store = {};
+	loader.init({app, config, store});
+	dispatcher.init({app, config, store});
 	app.listen(port, () => {
 		consola.ready(`Listening on port: ${port}`);
 	});
